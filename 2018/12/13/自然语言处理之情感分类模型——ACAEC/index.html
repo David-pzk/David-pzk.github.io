@@ -129,7 +129,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo,Markdown - machinelearning - NLP - sentiment analysis," />
 
 
 
@@ -142,16 +142,31 @@
 
 
 
-<meta name="description" content="写下学习路上的风景，再回首时莫叹息。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="David">
-<meta property="og:url" content="https://david-pzk.github.io/index.html">
+<meta name="description" content="自然语言处理之情感分析模型——ACAEC“除了眼前璀璨的星空，不要忘记我们脚下的阶石，那是我们习以为常但前人穷其一生的。” ——小记  &amp;#160; &amp;#160; &amp;#160; &amp;#160;这是我在情感分析模型中读过的第二篇论文，从这篇论文中我看到了一个与第一篇论文不一样的情感分析模型，作者Murtadha Talib AL-Sharuee、刘飞等人使用了一个无需人工标注，并且可夸多个领域的基于无">
+<meta name="keywords" content="Hexo,Markdown - machinelearning - NLP - sentiment analysis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自然语言处理之情感分析模型——ACAEC">
+<meta property="og:url" content="https://david-pzk.github.io/2018/12/13/自然语言处理之情感分类模型——ACAEC/index.html">
 <meta property="og:site_name" content="David">
-<meta property="og:description" content="写下学习路上的风景，再回首时莫叹息。">
+<meta property="og:description" content="自然语言处理之情感分析模型——ACAEC“除了眼前璀璨的星空，不要忘记我们脚下的阶石，那是我们习以为常但前人穷其一生的。” ——小记  &amp;#160; &amp;#160; &amp;#160; &amp;#160;这是我在情感分析模型中读过的第二篇论文，从这篇论文中我看到了一个与第一篇论文不一样的情感分析模型，作者Murtadha Talib AL-Sharuee、刘飞等人使用了一个无需人工标注，并且可夸多个领域的基于无">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/1.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/2.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/3.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/4.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/5.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/6.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/7.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/8.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/9.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/10.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/11.png">
+<meta property="og:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/12.png">
+<meta property="og:updated_time" content="2018-12-18T08:46:13.181Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="David">
-<meta name="twitter:description" content="写下学习路上的风景，再回首时莫叹息。">
+<meta name="twitter:title" content="自然语言处理之情感分析模型——ACAEC">
+<meta name="twitter:description" content="自然语言处理之情感分析模型——ACAEC“除了眼前璀璨的星空，不要忘记我们脚下的阶石，那是我们习以为常但前人穷其一生的。” ——小记  &amp;#160; &amp;#160; &amp;#160; &amp;#160;这是我在情感分析模型中读过的第二篇论文，从这篇论文中我看到了一个与第一篇论文不一样的情感分析模型，作者Murtadha Talib AL-Sharuee、刘飞等人使用了一个无需人工标注，并且可夸多个领域的基于无">
+<meta name="twitter:image" content="http://pin4m4ioe.bkt.clouddn.com/ACAEC/1.png">
 
 
 
@@ -181,7 +196,7 @@
 
 
 
-  <link rel="canonical" href="https://david-pzk.github.io/"/>
+  <link rel="canonical" href="https://david-pzk.github.io/2018/12/13/自然语言处理之情感分类模型——ACAEC/"/>
 
 
 
@@ -197,7 +212,7 @@ daovoice('update');
 
 
 
-  <title>David</title>
+  <title>自然语言处理之情感分析模型——ACAEC | David</title>
   
 
 
@@ -216,8 +231,7 @@ daovoice('update');
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/David-pzk" class="github-corner" aria-label="View source on GitHub"><svg width="93" height="93" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
@@ -359,9 +373,9 @@ daovoice('update');
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -391,9 +405,7 @@ daovoice('update');
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/13/自然语言处理之情感分类模型——ACAEC/" itemprop="url">自然语言处理之情感分析模型——ACAEC</a></h1>
+          <h1 class="post-title" itemprop="name headline">自然语言处理之情感分析模型——ACAEC</h1>
         
 
         <div class="post-meta">
@@ -447,6 +459,11 @@ daovoice('update');
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -496,9 +513,7 @@ daovoice('update');
       
 
       
-        
-          
-            <h1 id="自然语言处理之情感分析模型——ACAEC"><a href="#自然语言处理之情感分析模型——ACAEC" class="headerlink" title="自然语言处理之情感分析模型——ACAEC"></a>自然语言处理之情感分析模型——ACAEC</h1><p>“除了眼前璀璨的星空，不要忘记我们脚下的阶石，那是我们习以为常但前人穷其一生的。”</p>
+        <h1 id="自然语言处理之情感分析模型——ACAEC"><a href="#自然语言处理之情感分析模型——ACAEC" class="headerlink" title="自然语言处理之情感分析模型——ACAEC"></a>自然语言处理之情感分析模型——ACAEC</h1><p>“除了眼前璀璨的星空，不要忘记我们脚下的阶石，那是我们习以为常但前人穷其一生的。”</p>
 <div align="right">——小记</div>
 
 <p>&#160; &#160; &#160; &#160;这是我在情感分析模型中读过的第二篇论文，从这篇论文中我看到了一个与第一篇论文不一样的情感分析模型，作者Murtadha Talib AL-Sharuee、刘飞等人使用了一个无需人工标注，并且可夸多个领域的基于无监督算法的情感分析模型——自动上下文分析和集合聚类方法的情感分析模型(ACAEC)。  </p>
@@ -531,8 +546,6 @@ daovoice('update');
 <p>&#160; &#160; &#160; &#160;ACAEC通过Java8和NETBEANS集成工具来进行实验。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&#160; &#160; &#160; &#160;在该文章中，作者讨论了一个完整的应用于情感分析的自动无监督机器学习系统。该系统包含了自动上下文分析和无监督集成聚类。无监督学习和可靠性是将所提出的方法与文献中的其他工作区分开的特征。ACAEC的可靠性源于将上下文分析和集成学习系统结合。这是一个具有较优准确度的无监督途径，其后，这是一个领域无关的分析系统。ACAEC解决了数据注释的问题，避免了一个昂贵的过程。<br>&#160; &#160; &#160; &#160;作为特征工作，我们将考虑一个基于情感强度的多累问题。通过老驴跟过的上下文分析和利用其他权重系统或其噶机器学习途径能够获得一个增强器。</p>
 
-          
-        
       
     </div>
     
@@ -541,6 +554,38 @@ daovoice('update');
 
     <div>
     	
+		
+<div class="my_post_copyright">
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> 
+ <!-- JS库 sweetalert 可修改路径 --> 
+ <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> 
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+ <p><span>本文标题:</span><a href="/2018/12/13/自然语言处理之情感分类模型——ACAEC/">自然语言处理之情感分析模型——ACAEC</a></p>
+ <p><span>文章作者:</span><a href="/" title="访问 David-pzk 的个人博客">David-pzk</a></p>
+ <p><span>发布时间:</span>2018年12月13日 - 00:12</p>
+ <p><span>最后更新:</span>2018年12月18日 - 16:12</p>
+ <p><span>原始链接:</span><a href="/2018/12/13/自然语言处理之情感分类模型——ACAEC/" title="自然语言处理之情感分析模型——ACAEC">https://david-pzk.github.io/2018/12/13/自然语言处理之情感分类模型——ACAEC/</a> 
+ <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://david-pzk.github.io/2018/12/13/自然语言处理之情感分类模型——ACAEC/" aria-label="复制成功！"></i></span> 
+ </p>
+ <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> 
+ </div> 
+ <script>
+ var clipboard = new Clipboard('.fa-clipboard');
+ $(".fa-clipboard").click(function(){
+ clipboard.on('success', function(){
+ swal({
+ title: "",
+ text: '复制成功',
+ icon: "success",
+ showConfirmButton: true
+ });
+ });
+ });
+ </script>
+  
+
+
+	
     </div>
 
     
@@ -551,365 +596,38 @@ daovoice('update');
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-
-  <div>
-  
-</div>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://david-pzk.github.io/2018/11/24/自然语言处理——情感分析模型/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="David-pzk">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="David">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/24/自然语言处理——情感分析模型/" itemprop="url">自然语言处理——情感分析模型</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-24T00:00:00+08:00">
-                2018-11-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NLP/" itemprop="url" rel="index">
-                    <span itemprop="name">NLP</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           
-
+            <a href="/tags/Markdown-machinelearning-NLP-sentiment-analysis/" rel="tag"><i class="fa fa-tag"></i> Markdown - machinelearning - NLP - sentiment analysis</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  3.5k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  13
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="自然语言处理之情感分析模型-——————SOSML模型"><a href="#自然语言处理之情感分析模型-——————SOSML模型" class="headerlink" title="自然语言处理之情感分析模型 ——————SOSML模型"></a>自然语言处理之情感分析模型 ——————SOSML模型</h1><p>“从这篇文章开始，便是记录我在自然语言处理情感分析模型的学习之路，以期望能实现一个完整的情感分析模型”                                         </p>
-<div align="right"> ———前记</div>
-
-<p>&#160; &#160; &#160; &#160;Asad Abdi等人在情感分析模型中实现了一种基于机器学习的多文档情感概括分析模型，该模型结合了情感知识、深度学习系统、统计和语义知识，简称为SOSML模型。    </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/24/自然语言处理——情感分析模型/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/24/自然语言处理——情感分析模型/" rel="next" title="自然语言处理——情感分析模型">
+                <i class="fa fa-chevron-left"></i> 自然语言处理——情感分析模型
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    <div>
-    	
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-
-  <div>
-  
-</div>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://david-pzk.github.io/2018/10/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="David-pzk">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="David">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/14/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-14T10:25:31+08:00">
-                2018-10-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  73
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/14/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-    	
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -919,199 +637,29 @@ daovoice('update');
 
   <div>
   
-</div>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://david-pzk.github.io/2018/10/05/markdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="David-pzk">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="David">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/05/markdown/" itemprop="url">Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-05T00:00:00+08:00">
-                2018-10-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  95
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这是我所写的第一的hexo博客，这是一篇测试博客，我希望的我的机器学习之路可以再次上升到一个新的台阶。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/05/markdown/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
     <div>
-    	
-    </div>
-
     
-
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
     
+</div>
 
-    
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-
-  <div>
   
 </div>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bee5ad8249e6c98" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1119,6 +667,15 @@ daovoice('update');
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTA3NC8xNzU5OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1139,8 +696,17 @@ daovoice('update');
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1237,6 +803,22 @@ daovoice('update');
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自然语言处理之情感分析模型——ACAEC"><span class="nav-number">1.</span> <span class="nav-text">自然语言处理之情感分析模型——ACAEC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#相关工作"><span class="nav-number">1.1.</span> <span class="nav-text">相关工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动语境分析和集成分类-ACAEC-："><span class="nav-number">1.2.</span> <span class="nav-text">自动语境分析和集成分类(ACAEC)：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#情感词网络"><span class="nav-number">1.2.1.</span> <span class="nav-text">情感词网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动语境分析："><span class="nav-number">1.2.2.</span> <span class="nav-text">自动语境分析：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据清洗"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">数据清洗</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拼写检查"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">拼写检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增强处理"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">增强处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#否定处理"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">否定处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比处理"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">对比处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集成分类"><span class="nav-number">1.2.3.</span> <span class="nav-text">集成分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#k-means算法"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">k-means算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空间向量模型"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">空间向量模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#短语规范化"><span class="nav-number">1.2.3.2.1.</span> <span class="nav-text">短语规范化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逆文档频率（IDF）："><span class="nav-number">1.2.3.2.2.</span> <span class="nav-text">逆文档频率（IDF）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Term-frequency-inverse-document-frequency-TFIDF"><span class="nav-number">1.2.3.2.3.</span> <span class="nav-text">Term frequency inverse document frequency(TFIDF)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Weight-frequency-inverse-document-frequency-WFIDF"><span class="nav-number">1.2.3.2.4.</span> <span class="nav-text">Weight frequency inverse document frequency(WFIDF)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Average-of-weights-AW"><span class="nav-number">1.2.3.2.5.</span> <span class="nav-text">Average of weights(AW)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中立短语和特征简化"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">中立短语和特征简化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#极性质心"><span class="nav-number">1.2.3.3.1.</span> <span class="nav-text">极性质心</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#非随机极性初始化点"><span class="nav-number">1.2.3.3.2.</span> <span class="nav-text">非随机极性初始化点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集群解释"><span class="nav-number">1.2.3.3.3.</span> <span class="nav-text">集群解释</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集成学习："><span class="nav-number">1.2.3.4.</span> <span class="nav-text">集成学习：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#集成分类算法"><span class="nav-number">1.2.3.4.1.</span> <span class="nav-text">集成分类算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算复杂度分析："><span class="nav-number">1.2.3.4.2.</span> <span class="nav-text">计算复杂度分析：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚类算法的对比"><span class="nav-number">1.3.</span> <span class="nav-text">聚类算法的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验和分析"><span class="nav-number">1.4.</span> <span class="nav-text">实验和分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1422,6 +1004,10 @@ daovoice('update');
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1450,6 +1036,17 @@ daovoice('update');
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
